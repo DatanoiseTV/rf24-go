@@ -49,9 +49,8 @@ func (r *R) StopListening() {
 
 // TODO: implement Reader/Writer compatible interfaces
 func (r *R) Write(data []byte, length uint8) bool {
-        //d := (*[]byte)(unsafe.Pointer(&data))
-        d := data
-	return gobool(C.rf24_write(r.cptr, unsafe.Pointer(&d), C.uint8_t(length)))
+        d := C.CBytes(data)
+	return gobool(C.rf24_write(r.cptr, d, C.uint8_t(length)))
 }
 
 func (r *R) StartWrite(data []byte, length uint8, multicast bool) {
