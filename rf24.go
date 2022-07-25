@@ -49,7 +49,8 @@ func (r *R) StopListening() {
 
 // TODO: implement Reader/Writer compatible interfaces
 func (r *R) Write(data []byte, length uint8) bool {
-        d := (C.pInt)(unsafe.pointer(&data))
+        //d := (*[]byte)(unsafe.Pointer(&data))
+        d := unsafe.Pointer(&data)
 	return gobool(C.rf24_write(r.cptr, d, C.uint8_t(length)))
 }
 
