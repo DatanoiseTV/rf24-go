@@ -15,4 +15,8 @@ mkdir build
 cd build
 cmake ..
 make && sudo make install
-``
+```
+
+# Example
+
+You can find a working example at https://github.com/DatanoiseTV/rf24-go-example
