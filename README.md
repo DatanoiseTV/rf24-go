@@ -17,6 +17,20 @@ cmake ..
 make && sudo make install
 ```
 
+# Usage
+Add rf24-go to your imports in your project
+
+```go
+pacakge main
+
+import (
+    radio "github.com/DatanoiseTV/rf24-go"
+    ....
+)
+
+...
+``
+
 # Example
 
 You can find a working example at https://github.com/DatanoiseTV/rf24-go-example
