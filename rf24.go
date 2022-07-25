@@ -1,9 +1,9 @@
 package rf24
 
 /*
-  #cgo LDFLAGS: -lrf24c -lrf24
-  #cgo CFLAGS: -Irf24c/
-  #cgo CPPFLAGS: -Irf24c/
+  #cgo LDFLAGS: -Lrf24c -lrf24c -lrf24
+  #cgo CFLAGS: -Irf24c
+  #cgo CPPFLAGS: -Irf24c
   #include "rf24c.h"
   #include <stdio.h>
 */
